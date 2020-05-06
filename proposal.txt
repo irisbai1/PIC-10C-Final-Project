@@ -1,0 +1,8 @@
+For my final project, I would like to make a doodle jump game.
+
+Basic Idea:
+
+Have platforms occuring at regular intervals along the y-axis but at random places along the x-axis.
+When game starts, character will start jumping.
+Use arrow keys to move character left and right.
+Character keeps jumping upwards from platform to platform until it misses a platform and dies.
