@@ -8,3 +8,5 @@ Timeline
     https://www.youtube.com/watch?v=7Vf_vQIUk5Q
     
 5/21/20- Started actual project, but I'm having issues connecting and pushing to Github. I think its because I'm trying to use both the Qt interface and the terminal. The error has something to do with creating an index.lock file.
+
+5/29/20- I did a lot of research on how to use Qt to make this, but couldn't find anything really clear, so I decided to just code this on Xcode using SFML for MacOS.
