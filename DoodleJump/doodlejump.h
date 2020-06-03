@@ -1,6 +1,7 @@
 #ifndef DOODLEJUMP_H
 #define DOODLEJUMP_H
 
+#include "Constants.h"
 #include <QMainWindow>
 
 QT_BEGIN_NAMESPACE

@@ -20,6 +20,7 @@ SOURCES += \
     doodlejump.cpp
 
 HEADERS += \
+    Constants.h \
     doodlejump.h
 
 FORMS += \
