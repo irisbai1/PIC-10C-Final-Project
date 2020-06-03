@@ -9,10 +9,10 @@
 /* Begin PBXBuildFile section */
 		119AB04A248764E50003B53B /* ResourcePath.mm in Sources */ = {isa = PBXBuildFile; fileRef = 119AB049248764E50003B53B /* ResourcePath.mm */; };
 		119AB04D248764E50003B53B /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 119AB04C248764E50003B53B /* main.cpp */; };
-		119AB050248764E50003B53B /* cute_image.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 119AB04F248764E50003B53B /* cute_image.jpg */; };
-		119AB052248764E50003B53B /* nice_music.ogg in Resources */ = {isa = PBXBuildFile; fileRef = 119AB051248764E50003B53B /* nice_music.ogg */; };
 		119AB054248764E50003B53B /* sansation.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 119AB053248764E50003B53B /* sansation.ttf */; };
-		119AB056248764E50003B53B /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 119AB055248764E50003B53B /* icon.png */; };
+		119AB05F248766200003B53B /* Doodler.png in Resources */ = {isa = PBXBuildFile; fileRef = 119AB05C248766200003B53B /* Doodler.png */; };
+		119AB060248766200003B53B /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 119AB05D248766200003B53B /* background.png */; };
+		119AB061248766200003B53B /* platform.png in Resources */ = {isa = PBXBuildFile; fileRef = 119AB05E248766200003B53B /* platform.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,10 +21,10 @@
 		119AB049248764E50003B53B /* ResourcePath.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ResourcePath.mm; sourceTree = "<group>"; };
 		119AB04B248764E50003B53B /* ResourcePath.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ResourcePath.hpp; sourceTree = "<group>"; };
 		119AB04C248764E50003B53B /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		119AB04F248764E50003B53B /* cute_image.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = cute_image.jpg; path = ../cute_image.jpg; sourceTree = "<group>"; };
-		119AB051248764E50003B53B /* nice_music.ogg */ = {isa = PBXFileReference; lastKnownFileType = file; name = nice_music.ogg; path = ../nice_music.ogg; sourceTree = "<group>"; };
 		119AB053248764E50003B53B /* sansation.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = sansation.ttf; path = ../sansation.ttf; sourceTree = "<group>"; };
-		119AB055248764E50003B53B /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = ../icon.png; sourceTree = "<group>"; };
+		119AB05C248766200003B53B /* Doodler.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Doodler.png; path = ../../../../../../Downloads/Doodler.png; sourceTree = "<group>"; };
+		119AB05D248766200003B53B /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = background.png; path = ../../../../../../Downloads/background.png; sourceTree = "<group>"; };
+		119AB05E248766200003B53B /* platform.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = platform.png; path = ../../../../../../Downloads/platform.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,10 +77,10 @@
 		119AB04E248764E50003B53B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				119AB04F248764E50003B53B /* cute_image.jpg */,
-				119AB051248764E50003B53B /* nice_music.ogg */,
+				119AB05D248766200003B53B /* background.png */,
+				119AB05C248766200003B53B /* Doodler.png */,
+				119AB05E248766200003B53B /* platform.png */,
 				119AB053248764E50003B53B /* sansation.ttf */,
-				119AB055248764E50003B53B /* icon.png */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -143,10 +143,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				119AB056248764E50003B53B /* icon.png in Resources */,
+				119AB060248766200003B53B /* background.png in Resources */,
+				119AB061248766200003B53B /* platform.png in Resources */,
 				119AB054248764E50003B53B /* sansation.ttf in Resources */,
-				119AB052248764E50003B53B /* nice_music.ogg in Resources */,
-				119AB050248764E50003B53B /* cute_image.jpg in Resources */,
+				119AB05F248766200003B53B /* Doodler.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
