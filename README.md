@@ -4,7 +4,7 @@ Doodle Jump
 The purpose of this code is to replicate the game Doodle Jump
 
 Resources I Used
-https://www.sfml-dev.org/tutorials/2.5/graphics-sprite.php
+    https://www.sfml-dev.org/tutorials/2.5/graphics-sprite.php
 
 Timeline
 5/9/20- found quick tutorial to code doodle jump online
