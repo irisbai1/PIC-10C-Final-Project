@@ -16,4 +16,7 @@ Timeline
     Configuring SFML for my Mac took me 3 hours because there were so many errors.
     
 6/2/20- Started following the tutorial for the code, but the sizes of my images don't match the ones he has.
+
+6/5/20- Doodler can now be controlled by keyboard and move up when it collides with platforms.
+        Fixed the sizes of the images by using the images from the tutorial instead of my own. I think it's because my images originally were the wrong dimensions. My doodler originally jumped way too fast, but I realized I didn't set the Frameratelimit.
   
