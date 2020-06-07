@@ -27,4 +27,7 @@ There was another error when I first tried to compile my SFML App. Fixed it by g
 Doodler can now be controlled by keyboard and move up when it collides with platforms.
 <br> - Fixed the sizes of the images by using the images from the tutorial instead of my own. I think it's because my images originally were the wrong dimensions. My doodler originally jumped way too fast, but I realized I didn't set the Frameratelimit.
 <br> - Also figuring out how to use markdown
+
+### 6/7/20 - 3 hrs
+Drew a play button and platform cushion on my iPad to customize game a little more. Didn't implement the new images yet.
   
