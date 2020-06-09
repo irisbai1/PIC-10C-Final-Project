@@ -31,8 +31,8 @@ There was another error when I first tried to compile my SFML App. Fixed it by g
 
 ### 6/5/20 - 2 hrs
 Doodler can now be controlled by keyboard and move up when it collides with platforms.
-<br>   - Fixed the sizes of the images by using the images from the tutorial instead of my own. I think it's because my images originally were the wrong dimensions. My doodler originally jumped way too fast, but I realized I didn't set the Frameratelimit.
-<br>   - Also figuring out how to use markdown
+<br>    - Fixed the sizes of the images by using the images from the tutorial instead of my own. I think it's because my images originally were the wrong dimensions. My doodler originally jumped way too fast, but I realized I didn't set the Frameratelimit.
+<br>    - Also figuring out how to use markdown
 
 ### 6/7/20 - 3 hrs
 Drew a play button and platform cushion (playbutton.PNG and myPlatform.PNG) on my iPad to customize game a little more. Didn't implement the new images yet.
@@ -40,5 +40,5 @@ Drew a play button and platform cushion (playbutton.PNG and myPlatform.PNG) on m
 ### 6/9/20 - 4 hrs
 Drew a panda to replace Doodler. Switched platform and doodler to use the images(cushion and panda) I drew. Also reuploaded my previous drawings to have transparent background and correct size.
 <br> I'm trying to implement the play button by making a clickable sprite. I am trying to make it so that the play button appears when bool play = false and the game appears when play = true. However, when I try to compile the code, my app doesn't open.
-<br>   - Succeeded in implementing the play button. I just deleted my previous code that didn't work and tried a few more times.
+<br>    - Succeeded in implementing the play button. I just deleted my previous code that didn't work and tried a few more times.
   
