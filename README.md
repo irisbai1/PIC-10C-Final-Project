@@ -23,7 +23,7 @@ Started actual project, but I'm having issues connecting and pushing to Github. 
 
 ### 5/29/20 - 3.5 hrs
 I did a lot of research on how to use Qt to make this, but couldn't find anything really clear, so I decided to just code this on Xcode using SFML for MacOS.
-<br>    - Configuring SFML for my Mac took me 3 hours because there were so many errors.
+    - Configuring SFML for my Mac took me 3 hours because there were so many errors.
     
 ### 6/2/20 - 2 hrs
 There was another error when I first tried to compile my SFML App. Fixed it by googling the error.
