@@ -34,12 +34,13 @@ int main(int, char const**)
     RenderWindow app(VideoMode(400,533), "Doodle Game!");
     app.setFramerateLimit(80);//controls speed of doodler
     
-    Texture t1,t2,t3;
-    t1.loadFromFile(resourcePath()+ "background.png");
-    t2.loadFromFile(resourcePath()+ "platform.png");
-    t3.loadFromFile(resourcePath()+ "Doodler.png");
+    Texture tpb,tbg,tpf,td;
+    tpb.loadFromFile(resourcePath()+ "playbutton.PNG");
+    tbg.loadFromFile(resourcePath()+ "background.png");
+    tpf.loadFromFile(resourcePath()+ "myplatform.PNG");
+    td.loadFromFile(resourcePath()+ "panda.png");
     
-    Sprite sBackground(t1), sPlat(t2), sPers(t3);
+    Sprite sPlaybutton(tpb), sBackground(tbg), sPlat(tpf), sPers(td);
     
     point plat[20];
     
@@ -52,11 +53,21 @@ int main(int, char const**)
     int x=100, y=100, h=200;
     float dx = 0, dy=0;
     
+    bool play = false;
+    
     while (app.isOpen()) {
         Event e;
         while(app.pollEvent(e)) {
             if (e.type == Event::Closed) {
                 app.close();
+            }
+            if (e.type == Event::MouseButtonPressed) {
+                sf::Vector2i mousePosition = sf::Mouse::getPosition(app);
+                sf::Vector2f mousePositionFloat((float)mousePosition.x, (float)mousePosition.y);
+                if (sPlaybutton.getGlobalBounds().contains(mousePositionFloat))
+                {
+                    play = true;
+                }
             }
         }
         
@@ -73,6 +84,7 @@ int main(int, char const**)
             if ((x+50>plat[i].x) && (x+20<plat[i].x+69) && (y+70>plat[i].y) && (y+70<plat[i].y+14) && (dy>0)) {dy=-10;}
         }
         
+        //scrolls up the screen when Doodler gets high enough
         if(y<h) {
             for (int i=0; i<10; i++) {
                 y=h;
@@ -85,14 +97,20 @@ int main(int, char const**)
         }
         
         sPers.setPosition(x,y);
-        
         app.draw(sBackground);
-        sBackground.setScale(FRAME_WIDTH,FRAME_HEIGHT);
-        app.draw(sPers);
+
+        if (!play) {
+            app.draw(sPlaybutton);
+            sPlaybutton.setPosition(75,200);
+        }
         
-        for (int i=0;i<10; i++) {
-            sPlat.setPosition(plat[i].x,plat[i].y);
-            app.draw(sPlat);
+        else {
+            app.draw(sPers);
+            
+            for (int i=0;i<10; i++) {
+                sPlat.setPosition(plat[i].x,plat[i].y);
+                app.draw(sPlat);
+            }
         }
         app.display();
         
