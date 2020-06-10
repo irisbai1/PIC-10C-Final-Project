@@ -2,6 +2,7 @@
 
 ## Doodle Jump
 The purpose of this code is to replicate the game Doodle Jump. I decided to draw my own images to make the game my own.
+This was coded using Xcode version 11.3.1 (11C504) and the SFML 2.5.1 library.
 
 ## Resources I Used (not comprehensive)
     https://www.youtube.com/watch?v=7Vf_vQIUk5Q
