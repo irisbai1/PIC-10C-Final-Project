@@ -17,10 +17,10 @@
 #include <SFML/Audio.hpp>
 #include <SFML/Graphics.hpp>
 #include <time.h>
+#include "constants.h"
 
 // Here is a small helper for you! Have a look.
 #include "ResourcePath.hpp"
-#include "constants.h"
 
 using namespace sf;
 
@@ -31,7 +31,7 @@ int main(int, char const**)
 {
     srand(time(0));
     
-    RenderWindow app(VideoMode(400,533), "Doodle Game!");
+    RenderWindow app(VideoMode(FRAME_WIDTH,FRAME_HEIGHT), "Doodle Game!");
     app.setFramerateLimit(80);//controls speed of doodler
     
     Texture tpb,tbg,tpf,td;
@@ -46,8 +46,8 @@ int main(int, char const**)
     
     // randomize platform appearance
     for (int i=0; i<10; i++) {
-        plat[i].x=rand()%400;
-        plat[i].y=rand()%533;
+        plat[i].x=rand()%FRAME_WIDTH;
+        plat[i].y=rand()%FRAME_HEIGHT;
     }
     
     int x=100, y=100, h=200;
@@ -55,12 +55,14 @@ int main(int, char const**)
     
     bool play = false;
     
+    // Run app
     while (app.isOpen()) {
         Event e;
         while(app.pollEvent(e)) {
             if (e.type == Event::Closed) {
                 app.close();
             }
+            // Create working play button
             if (e.type == Event::MouseButtonPressed) {
                 sf::Vector2i mousePosition = sf::Mouse::getPosition(app);
                 sf::Vector2f mousePositionFloat((float)mousePosition.x, (float)mousePosition.y);
@@ -71,8 +73,9 @@ int main(int, char const**)
             }
         }
         
-        if(Keyboard::isKeyPressed(Keyboard::Right)) {x+=3;}
-        if(Keyboard::isKeyPressed(Keyboard::Left)) {x-=3;}
+        // make doodle respond to keyboard controls
+        if(Keyboard::isKeyPressed(Keyboard::Right)) {x+=DOODLE_XMOVE;}
+        if(Keyboard::isKeyPressed(Keyboard::Left)) {x-=DOODLE_XMOVE;}
         
         // make Doodler jump
         dy+= 0.2;
@@ -81,19 +84,25 @@ int main(int, char const**)
         
         // make Doodler bounce when it collides with platform
         for(int i=0; i<10; i++){
-            if ((x+50>plat[i].x) && (x+20<plat[i].x+69) && (y+70>plat[i].y) && (y+70<plat[i].y+14) && (dy>0)) {dy=-10;}
+            if ((x+DOODLER_WIDTH>plat[i].x) && (x<plat[i].x+PLATFORM_WIDTH) && (y+DOODLER_HEIGHT>plat[i].y) && (y+DOODLER_HEIGHT<plat[i].y+PLATFORM_HEIGHT) && (dy>0)) {dy=-10;}
         }
         
-        //scrolls up the screen when Doodler gets high enough
+        //scrolls up the screen when Doodler gets high enough and generates more platforms
         if(y<h) {
             for (int i=0; i<10; i++) {
                 y=h;
                 plat[i].y=plat[i].y-dy;
-                if (plat[i].y>533) {
+                if (plat[i].y>FRAME_HEIGHT) {
                     plat[i].y = 0;
-                    plat[i].x = rand()%400;
+                    plat[i].x = rand()%FRAME_WIDTH;
                 }
             }
+        }
+        
+        // allows Doodler to die
+        if (sPers.getGlobalBounds().top+DOODLER_HEIGHT > FRAME_HEIGHT) {
+            app.draw(sPlaybutton);
+            play = false;
         }
         
         sPers.setPosition(x,y);
