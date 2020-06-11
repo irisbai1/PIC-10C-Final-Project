@@ -5,15 +5,18 @@ The purpose of this code is to replicate the game Doodle Jump. I decided to draw
 This was coded using Xcode version 11.3.1 (11C504) and the SFML 2.5.1 library.
 
 ## Resources I Used (not comprehensive)
+    https://www.sfml-dev.org/tutorials/2.5/start-osx.php
     https://www.youtube.com/watch?v=7Vf_vQIUk5Q
     https://www.sfml-dev.org/tutorials/2.5/graphics-sprite.php
     https://markdown-guide.readthedocs.io/en/latest/basics.html
     https://stackoverflow.com/questions/23530360/how-do-you-make-a-clickable-sprite-in-sfml/23578981
+    https://www.sfml-dev.org/documentation/2.5.1/classsf_1_1Rect.php#abd3d3a2d0ad211ef0082bd0aa1a5c0e3
     
 ## How to Play
 1. Run application.
 2. Click on Play button.
 3. Use left and right arrow keys to move the doodle and have it jump on platforms.
+4. Doodle will die and game will end if it falls to the bottom of the window.
 
 ## Timeline
 ### 5/9/20 - 20 min
@@ -44,3 +47,6 @@ This was coded using Xcode version 11.3.1 (11C504) and the SFML 2.5.1 library.
 + I'm trying to implement the play button by making a clickable sprite. I am trying to make it so that the play button appears when bool play = false and the game appears when play = true. However, when I try to compile the code, my app doesn't open.
 <br>    - Succeeded in implementing the play button. I just deleted my previous code that didn't work and tried a few more times.
   
+### 6/10/20 - 1 hr
++ Implemented an "end of game" by making the doodler die if it falls to the bottom of the screen.
+<br>    - Took a long time to figure out because I didn't realize SFML has its (0,0) origin at the top left and numbers increase to the bottom right.
