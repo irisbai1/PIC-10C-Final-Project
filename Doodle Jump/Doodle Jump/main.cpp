@@ -1,25 +1,17 @@
 
 //
-// Disclaimer:
-// ----------
+//  main.cpp
+//  Doodle Jump
 //
-// This code will work only if you selected window, graphics and audio.
+//  Created by Iris Bai on 5/29/20.
+//  Copyright © 2020 Iris Bai. All rights reserved.
 //
-// Note that the "Run Script" build phase will copy the required frameworks
-// or dylibs to your application bundle so you can execute it on any OS X
-// computer.
-//
-// Your resource files (images, sounds, fonts, ...) are also copied to your
-// application bundle. To get the path to these resources, use the helper
-// function `resourcePath()` from ResourcePath.hpp
-//
+//  This is the main code for my game of Doodle Jump.
 
 #include <SFML/Audio.hpp>
 #include <SFML/Graphics.hpp>
 #include <time.h>
 #include "constants.h"
-
-// Here is a small helper for you! Have a look.
 #include "ResourcePath.hpp"
 
 using namespace sf;
@@ -115,6 +107,7 @@ int main(int, char const**)
         
         else {
             app.draw(sPers);
+//            sPers.setPosition(200,400);
             
             for (int i=0;i<10; i++) {
                 sPlat.setPosition(plat[i].x,plat[i].y);

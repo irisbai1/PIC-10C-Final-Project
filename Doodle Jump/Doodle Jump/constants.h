@@ -16,7 +16,7 @@ const int PLATFORM_HEIGHT = 19; // (UNITS: pixels)
 const int DOODLER_WIDTH = 64; // (UNITS: pixels)
 const int DOODLER_HEIGHT = 80; // (UNITS: pixels)
 
-const int FRAME_WIDTH = 433; // (UNITS: pixels)
+const int FRAME_WIDTH = 400; // (UNITS: pixels)
 const int FRAME_HEIGHT = 533; // (UNITS: pixels)
 const double FRAME_MIDPOINT = 533/2; // (UNITS: pixels)
 
